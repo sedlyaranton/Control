@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">Control</string>
+    <string name="text_menu">Справка</string>
+    <string name="text_exit">Выход</string>
+    <string name="title_activity_calculator_zpp">Калькулятор ЗП</string>
+    <string name="text_salary">Оклад</string>
+    <string name="text_work_clok">Отработанные часы</string>
+    <string name="text_year_norm">Годовая норма</string>
+    <string name="text_prem">Введите премию</string>
+    <string name="text_kty">Введите КТУ</string>
+    <string name="text_rezald">Результат</string>
+    <string name="text_btn_calc_zp">Считать</string>
+    <string name="title_activity_chat">Чат</string>
+    <string name="title_activity_tabel">Табель</string>
+    <string name="text_btn_save">Сохранить</string>
+    <string name="text_date">Устоновите дату</string>
+    <string name="text_clok">Устоновите время</string>
+    <string name="text_text">Описание работы</string>
+    <string name="text_btn_save_cancellation"> Отмена </string>
+    <string name="title_activity_calculator_zp">Расчет ЗП</string>
+
+    <string name="edit">Редактировать</string>
+    <string name="delete">Удолить</string>
+    <string name="title_activity_report">Report</string>
+
+</resources>

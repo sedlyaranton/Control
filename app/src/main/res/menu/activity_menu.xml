@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <item
+        android:id="@+id/spravka"
+        android:title="@string/text_menu" />
+    <item
+        android:id="@+id/exit"
+        android:title="@string/text_exit"
+        />
+    <item
+        android:id="@+id/report"
+        android:icon="@drawable/ic_event_note_black_30dp"
+        android:title="tabel"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/calc_zp"
+        android:icon="@drawable/ic_calc_dp"
+        android:title="calculator"
+        app:showAsAction="always" />
+
+
+</menu>

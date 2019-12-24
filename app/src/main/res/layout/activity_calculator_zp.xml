@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <EditText
+        android:id="@+id/ed_date"
+        android:layout_width="254dp"
+        android:layout_height="wrap_content"
+        android:padding="24dp"
+        android:hint="@string/text_salary"
+        android:inputType="number"/>
+
+    <EditText
+        android:id="@+id/ed_kol_clock"
+        android:layout_width="254dp"
+        android:layout_height="wrap_content"
+        android:padding="24dp"
+        android:hint="@string/text_work_clok"
+        android:inputType="number"/>
+    <EditText
+        android:id="@+id/ed_year_norm"
+        android:layout_width="254dp"
+        android:layout_height="wrap_content"
+        android:padding="24dp"
+        android:hint="@string/text_year_norm"
+        android:inputType="number"/>
+    <EditText
+        android:id="@+id/ed_prem"
+        android:layout_width="254dp"
+        android:layout_height="wrap_content"
+        android:padding="24dp"
+        android:hint="@string/text_prem"
+        android:inputType="number"/>
+
+    <EditText
+        android:id="@+id/ed_kty"
+        android:layout_width="254dp"
+        android:layout_height="wrap_content"
+        android:padding="24dp"
+        android:hint="@string/text_kty"
+        android:inputType="number"/>
+
+    <TextView
+        android:id="@+id/text_rez"
+        android:layout_width="254dp"
+        android:layout_height="wrap_content"
+        android:padding="24dp"
+        android:text="@string/text_rezald"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingTop="50dp">
+
+
+        <Button
+            android:id="@+id/btn_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/text_btn_calc_zp" />
+
+    </LinearLayout>
+
+</LinearLayout>
