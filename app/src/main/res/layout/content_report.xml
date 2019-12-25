@@ -8,34 +8,77 @@
     tools:context=".Report"
     tools:showIn="@layout/activity_report">
 
+
     <EditText
         android:id="@+id/start_date_et"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="10"
+        android:layout_width="250dp"
+        android:layout_height="71dp"
+        android:clickable="true"
+        android:hint="@string/text_date"
         android:inputType="date"
+        android:padding="24dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.077" />
+
 
     <EditText
         android:id="@+id/end_date_et"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="10"
+        android:layout_width="250dp"
+        android:layout_height="71dp"
+        android:clickable="true"
+        android:hint="@string/text_date"
         android:inputType="date"
+        android:padding="24dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/start_date_et" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.208" />
 
     <Button
         android:id="@+id/apply_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
         android:text="Применить"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/end_date_et" />
+
+    <ImageButton
+        android:id="@+id/image_calendreport1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:src="@drawable/ic_calend_24dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.754"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.094">
+
+    </ImageButton>
+
+    <ImageButton
+        android:id="@+id/image_calendreport2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:src="@drawable/ic_calend_24dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.754"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.216">
+
+    </ImageButton>
 
     <TextView
         android:id="@+id/report_tv"

@@ -5,16 +5,14 @@ import androidx.annotation.NonNull;
 
 
 public class ReportCard {
-
     private long reportCardDate;
     private long dateOfWork;
     private String hours;
     private String reportCardText;
-
+    private String dateOfWorkString;
 
 
     public ReportCard() { }
-
     public ReportCard(long dateOfWork, String hours, String reportCardText){
         this.reportCardDate = new Date().getTime();
         this.dateOfWork = dateOfWork;
@@ -23,7 +21,7 @@ public class ReportCard {
     }
 
     public String getHours() {
-        return hours;
+        return this.hours;
     }
 
     public void setHours(String hours) {
@@ -49,16 +47,20 @@ public class ReportCard {
         return dateOfWork;
     }
     public String getDateOfWorkString() {
-        return android.text.format.DateFormat.format("dd-MM-yyyy", new Date(this.dateOfWork)).toString(); //TODO CONVERT LONG DATE TO STRING DATE
+        return android.text.format.DateFormat.format("dd.MM.yyyy", new Date(this.dateOfWork)).toString(); //TODO CONVERT LONG DATE TO STRING DATE
     }
 
     public void setDateOfWork(long dateOfWork) {
         this.dateOfWork = dateOfWork;
     }
 
+    public void setDateOfWorkString(String dateOfWorkString) {
+        this.dateOfWorkString = dateOfWorkString;
+    }
+
     @NonNull
     @Override
     public String toString() {
-        return "test my custom object = " + getHours();
+        return "hours = " + getHours() + " description = " + getReportCardText();
     }
 }
