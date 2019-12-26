@@ -16,11 +16,13 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
+import android.text.method.ScrollingMovementMethod;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
+import android.widget.ScrollView;
 import android.widget.TextView;
 
 import java.util.HashMap;
@@ -35,6 +37,7 @@ public class Report extends AppCompatActivity implements View.OnClickListener {
 
 	private TextView reportTV;
 
+
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -45,21 +48,13 @@ public class Report extends AppCompatActivity implements View.OnClickListener {
 		start_date_et = findViewById(R.id.start_date_et);
 		end_date_et = findViewById(R.id.end_date_et);
 		reportTV = findViewById(R.id.report_tv);
+		reportTV.setMovementMethod(new ScrollingMovementMethod());
 
 		imageButton1 = (ImageButton) findViewById(R.id.image_calendreport1);
 		imageButton1.setOnClickListener(this);
 		imageButton2 = (ImageButton) findViewById(R.id.image_calendreport2);
 		imageButton2.setOnClickListener(this);
 
-		FloatingActionButton fab = findViewById(R.id.fab);
-		fab.setOnClickListener(new View.OnClickListener() {
-			@Override
-			public void onClick(View view) {
-				Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-						.setAction("Action", null).show();
-
-			}
-		});
 
 
 		applyBtn = findViewById(R.id.apply_btn);
@@ -67,26 +62,6 @@ public class Report extends AppCompatActivity implements View.OnClickListener {
 			@Override
 			public void onClick(View view) {
 
-//				switch (view.getId()) {
-//					case R.id.apply_btn:
-//						if (start_date_et.getText().toString() == "")
-//							if (end_date_et.getText().toString() == "")
-//									return;
-//
-//							FirebaseDatabase.getInstance().getReference().push().setValue(
-//									new ReportCard(
-//											new SimpleDateFormat("dd.MM.yyyy").parse(ed_data.getText().toString()).getTime(), //TODO CONVERT DATE STRING TO DATE LONG
-//											ed_clock.getText().toString(),
-//											ed_text.getText().toString()
-//									)
-//							);
-//						start_date_et.setText("");
-//						end_date_et.setText("");
-//						finish();
-//
-//						break;
-//
-//				}
 				final String startDate = (start_date_et.getText().toString() == null)? "02.01.1971" : start_date_et.getText().toString();
 				final String endDate = end_date_et.getText().toString();
 				DatabaseReference ref = FirebaseDatabase.getInstance()
@@ -102,14 +77,14 @@ public class Report extends AppCompatActivity implements View.OnClickListener {
 								Log.d(TAG, "onDataChange " + dataSnapshot.getChildrenCount());
 								int totalHours = 0;
 								String repotString = startDate + " - " + endDate;
-								repotString += "\n список работ: \n";
+								repotString += "\n Спиок выполненых работ: \n";
 								for (DataSnapshot reportCardDS: dataSnapshot.getChildren()) {
 									ReportCard reportCard = reportCardDS.getValue(ReportCard.class);
 									totalHours += Integer.valueOf( reportCard.getHours() + "");
 									repotString += reportCard.getReportCardText() + ";\n";
 								}
 
-								repotString += "\n total hours : " + totalHours;
+								repotString += "\n Сумма отработанных часов за выбранный период  : " + totalHours;
 								reportTV.setText(repotString);
 							}
 
@@ -122,6 +97,7 @@ public class Report extends AppCompatActivity implements View.OnClickListener {
 			}
 		});
 	}
+
 
 	@Override
 	public void onClick(View view) {

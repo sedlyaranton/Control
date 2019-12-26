@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/grey_50"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context=".Report"
     tools:showIn="@layout/activity_report">
@@ -13,8 +14,9 @@
         android:id="@+id/start_date_et"
         android:layout_width="250dp"
         android:layout_height="71dp"
+        android:background="@drawable/edittext_dg"
         android:clickable="true"
-        android:hint="@string/text_date"
+        android:hint="@string/text_date_report_s"
         android:inputType="date"
         android:padding="24dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -22,15 +24,15 @@
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.077" />
-
+        app:layout_constraintVertical_bias="0.064" />
 
     <EditText
         android:id="@+id/end_date_et"
         android:layout_width="250dp"
         android:layout_height="71dp"
+        android:background="@drawable/edittext_dg"
         android:clickable="true"
-        android:hint="@string/text_date"
+        android:hint="@string/text_date_report_p"
         android:inputType="date"
         android:padding="24dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -38,13 +40,16 @@
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.208" />
+        app:layout_constraintVertical_bias="0.248" />
 
     <Button
         android:id="@+id/apply_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="28dp"
+        android:background="@drawable/btn_dg"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
         android:text="Применить"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -55,13 +60,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
+        android:background="@drawable/edittext_dg"
         android:src="@drawable/ic_calend_24dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.754"
+        app:layout_constraintHorizontal_bias="0.772"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.094">
+        app:layout_constraintVertical_bias="0.098">
 
     </ImageButton>
 
@@ -70,23 +76,40 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
+        android:background="@drawable/edittext_dg"
         android:src="@drawable/ic_calend_24dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.754"
+        app:layout_constraintHorizontal_bias="0.772"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.216">
+        app:layout_constraintVertical_bias="0.27">
 
     </ImageButton>
 
-    <TextView
-        android:id="@+id/report_tv"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="ОТЧЁТ"
+    <LinearLayout
+        android:layout_width="359dp"
+        android:layout_height="284dp"
+        android:gravity="center"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/apply_btn" />
+        app:layout_constraintTop_toBottomOf="@+id/apply_btn">
+
+        <TextView
+            android:id="@+id/report_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/edittext_dg"
+            android:paddingLeft="15dp"
+            android:paddingTop="15dp"
+            android:paddingRight="15dp"
+            android:paddingBottom="15dp"
+            android:text="ОТЧЁТ"
+            android:textSize="16dp"
+            android:textStyle="italic" />
+
+    </LinearLayout>
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
