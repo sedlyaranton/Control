@@ -16,7 +16,8 @@
         <activity
             android:name=".Report"
             android:label="@string/title_activity_report"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:theme="@style/AppTheme.NoActionBar"
+            android:screenOrientation="portrait"/>
         <activity
             android:name=".Tabel"
             android:label="@string/title_activity_tabel"
@@ -24,7 +25,8 @@
         <activity
             android:name=".CalculatorZP"
             android:label="@string/title_activity_calculator_zp"
-            android:theme="@style/AppTheme" />
+            android:theme="@style/AppTheme"
+            android:screenOrientation="portrait"/>
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
