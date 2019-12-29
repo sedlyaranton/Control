@@ -74,7 +74,12 @@ public class CalculatorZP extends AppCompatActivity implements View.OnClickListe
 
         // формируем строку вывода
         // формируем строку вывода
-        text_rez.setText(num_ed_oklad + " / " + num_ed_year_norm + " * " + num_ed_kol_clock + " * " + num_ed_kty + " + " + num_ed_prem + " = " + result + "  руб. ");
+        text_rez.setText(num_ed_oklad + " / "
+                + num_ed_year_norm + " * "
+                + num_ed_kol_clock + " * "
+                + num_ed_kty + " + "
+                + num_ed_prem + " = "
+                + result + "  руб. ");
     }
 
 }
