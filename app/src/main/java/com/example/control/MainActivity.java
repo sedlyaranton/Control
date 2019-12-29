@@ -196,6 +196,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 Intent report = new Intent(this, Report.class);
                 startActivity(report);
                 return true;
+            case R.id.spravka:
+                Intent ref = new Intent(this, Reference.class);
+                startActivity(ref);
+                return true;
             default:
                 return super.onOptionsItemSelected(item);
         }

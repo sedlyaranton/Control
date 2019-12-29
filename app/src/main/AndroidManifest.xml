@@ -10,9 +10,13 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
+            android:name=".Reference"
+            android:label="@string/title_activity_reference"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity
             android:name=".Report"
             android:label="@string/title_activity_report"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".Tabel"
             android:label="@string/title_activity_tabel"
