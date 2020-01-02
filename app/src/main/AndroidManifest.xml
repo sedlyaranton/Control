@@ -20,7 +20,8 @@
         <activity
             android:name=".Tabel"
             android:label="@string/title_activity_tabel"
-            android:theme="@style/AppTheme" />
+            android:theme="@style/AppTheme"
+            android:screenOrientation="portrait"/>
         <activity
             android:name=".CalculatorZP"
             android:label="@string/title_activity_calculator_zp"
