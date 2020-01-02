@@ -1,18 +1,13 @@
 package com.example.control;
 
-import android.app.DatePickerDialog;
-
 import android.os.Bundle;
 import android.util.Log;
-import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
-import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import com.example.control.model.ReportCard;
 import com.google.firebase.auth.FirebaseAuth;
@@ -22,10 +17,8 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
-import java.io.UTFDataFormatException;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.util.Calendar;
 
 
 public class Tabel extends AppCompatActivity implements View.OnClickListener {

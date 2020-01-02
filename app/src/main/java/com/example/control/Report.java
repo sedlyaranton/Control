@@ -3,8 +3,6 @@ package com.example.control;
 import android.os.Bundle;
 
 import com.example.control.model.ReportCard;
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
-import com.google.android.material.snackbar.Snackbar;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -22,14 +20,11 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
-import android.widget.ScrollView;
 import android.widget.TextView;
-
-import java.util.HashMap;
 
 public class Report extends AppCompatActivity implements View.OnClickListener {
 	private static final String TAG = "Report";
-	private Button applyBtn;
+	private Button applyBtn, cancleBtn;
 	//private Integer counter;
 	private EditText start_date_et;
 	private EditText end_date_et;
@@ -42,8 +37,6 @@ public class Report extends AppCompatActivity implements View.OnClickListener {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_report);
-		Toolbar toolbar = findViewById(R.id.toolbar);
-		setSupportActionBar(toolbar);
 
 		start_date_et = findViewById(R.id.start_date_et);
 		end_date_et = findViewById(R.id.end_date_et);
@@ -56,7 +49,8 @@ public class Report extends AppCompatActivity implements View.OnClickListener {
 		imageButton2.setOnClickListener(this);
 
 
-
+		cancleBtn =findViewById(R.id.cancleBtn);
+		cancleBtn.setOnClickListener(this);
 		applyBtn = findViewById(R.id.apply_btn);
 		applyBtn.setOnClickListener(new View.OnClickListener() {
 			@Override
@@ -107,6 +101,9 @@ public class Report extends AppCompatActivity implements View.OnClickListener {
 				break;
 			case R.id.image_calendreport2:
 				Utility.callDatePicker(this, end_date_et);
+				break;
+			case R.id.cancleBtn:
+				finish();
 				break;
 		}
 	}

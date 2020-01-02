@@ -12,12 +12,12 @@
         />
     <item
         android:id="@+id/report"
-        android:icon="@drawable/ic_event_note_black_30dp"
+        android:icon="@drawable/ic_event_note_white_24dp"
         android:title="tabel"
         app:showAsAction="always" />
     <item
         android:id="@+id/calc_zp"
-        android:icon="@drawable/ic_calc_dp"
+        android:icon="@drawable/ic_monetization_on_black_24dp"
         android:title="calculator"
         app:showAsAction="always" />
 
