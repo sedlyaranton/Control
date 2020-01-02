@@ -1,5 +1,6 @@
 package com.example.control;
 
+import android.content.SharedPreferences;
 import android.os.Bundle;
 
 import com.example.control.model.ReportCard;
@@ -31,6 +32,9 @@ public class Report extends AppCompatActivity implements View.OnClickListener {
 	private ImageButton imageButton1, imageButton2;
 
 	private TextView reportTV;
+	private static final String KEY_SAVE = "key_result1";
+	SharedPreferences sPref;
+	final String SAVED_TEXT = "saved_text";
  // google
 
 	@Override
@@ -42,7 +46,6 @@ public class Report extends AppCompatActivity implements View.OnClickListener {
 		end_date_et = findViewById(R.id.end_date_et);
 		reportTV = findViewById(R.id.report_tv);
 		reportTV.setMovementMethod(new ScrollingMovementMethod());
-
 		imageButton1 = (ImageButton) findViewById(R.id.image_calendreport1);
 		imageButton1.setOnClickListener(this);
 		imageButton2 = (ImageButton) findViewById(R.id.image_calendreport2);
@@ -90,6 +93,35 @@ public class Report extends AppCompatActivity implements View.OnClickListener {
 				);
 			}
 		});
+		if(savedInstanceState != null ) {
+			reportTV.setText(savedInstanceState.getString(KEY_SAVE));
+
+			saveText();
+			loadText();
+		}
+
+	}
+
+
+	private void saveText() {
+		sPref = getPreferences(MODE_PRIVATE);
+		SharedPreferences.Editor ed = sPref.edit();
+		ed.putString(SAVED_TEXT, reportTV.getText().toString());
+		ed.commit();
+	}
+
+	private void loadText() {
+		sPref = getPreferences(MODE_PRIVATE);
+		String savedText = sPref.getString(SAVED_TEXT, "");
+		reportTV.setText(savedText);
+	}
+
+
+	@Override
+	public void onSaveInstanceState(Bundle outState) {
+		String save = reportTV.getText().toString();
+		outState.putString(KEY_SAVE, save);
+		super.onSaveInstanceState(outState);
 	}
 
 

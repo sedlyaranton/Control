@@ -8,8 +8,9 @@
     <string name="text_year_norm">Годовая норма</string>
     <string name="text_prem">Введите премию</string>
     <string name="text_kty">Введите КТУ</string>
-    <string name="text_rezald">Результат</string>
+    <string name="text_rezald">Результат вычесления:</string>
     <string name="text_btn_calc_zp">Считать</string>
+    <string name="text_btn_calc_zp1">Отмена</string>
     <string name="title_activity_chat">Чат</string>
     <string name="title_activity_tabel">Добавление записи в табель</string>
     <string name="text_btn_save">Сохранить</string>

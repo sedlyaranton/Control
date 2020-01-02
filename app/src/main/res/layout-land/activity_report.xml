@@ -15,6 +15,7 @@
         android:inputType="date"
         android:paddingLeft="10dp"
         android:paddingRight="10dp"
+        android:background="@drawable/edittext_dg"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.183"
@@ -24,17 +25,17 @@
 
     <ImageButton
         android:id="@+id/image_calendreport1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="29dp"
+        android:layout_height="38dp"
         android:layout_gravity="center_horizontal"
         android:background="@drawable/edittext_dg"
         android:src="@drawable/ic_calend_24dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.401"
+        app:layout_constraintHorizontal_bias="0.397"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.095">
+        app:layout_constraintVertical_bias="0.101">
 
     </ImageButton>
 
@@ -44,6 +45,7 @@
         android:layout_height="39dp"
         android:hint="@string/text_date_report_p"
         android:inputType="date"
+        android:background="@drawable/edittext_dg"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.183"
@@ -53,17 +55,17 @@
 
     <ImageButton
         android:id="@+id/image_calendreport2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="29dp"
+        android:layout_height="38dp"
         android:layout_gravity="center_horizontal"
         android:background="@drawable/edittext_dg"
         android:src="@drawable/ic_calend_24dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.401"
+        app:layout_constraintHorizontal_bias="0.397"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.338">
+        app:layout_constraintVertical_bias="0.351">
 
     </ImageButton>
 
@@ -90,6 +92,7 @@
             android:text="ОТЧЕТ"
             android:textSize="16dp"
             android:textStyle="italic"
+            android:background="@drawable/edittext_dg"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
